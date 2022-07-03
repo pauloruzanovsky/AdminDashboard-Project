@@ -27,12 +27,16 @@ li {
     display: flex;
     padding: 10px;
     gap: 15px;
+    padding-left: 20px;
 
 }
 
 li:hover {
-    background-color:#1588b6;
+    background-color: #1679bb;
+    transition: background-color .2s;
+
 }
+
 
 a { 
     padding: 0px;
@@ -47,6 +51,11 @@ i {
     align-self: center;
 }
 
+.fa-magnifying-glass {
+    cursor:pointer;
+
+
+}
 .logo {
     font-size: 17px;
     grid-area: logo;
@@ -61,7 +70,7 @@ i {
     font-size: 20px;
 }
 .sidebar {
-    background-color: #1AA3D9;
+    background-color: #1a8dd9;
     display: grid;
     grid-area: sidebar;
     align-content: start;
@@ -78,7 +87,6 @@ i {
     font-size: 13px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 .nav {
     grid-area: nav;
@@ -86,6 +94,7 @@ i {
 
 .settings {
     grid-area: settings;
+    margin-top: 30px;
 }
 
 .header {
@@ -183,7 +192,7 @@ input {
     height: 100%;
 }
 .button {
-    background-color: #1AA3D9;
+    background-color: #1a8dd9;
     color: white;
     border:0px;
     border-radius: 20px;
@@ -198,6 +207,8 @@ input {
 
 .button:hover {
     background-color: #F2BB16;
+    transition: background-color .2s;
+
 }
 .main {
     display: grid;
@@ -237,6 +248,9 @@ input {
     border-radius: 5px;
     padding:10px;
     box-shadow: 0 5px 5px 0px rgb(150, 150, 150);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 
 }
 .project-card-title {
@@ -248,6 +262,26 @@ input {
     color: #686868;
     font-size: 12px;
 }
+
+.project-card-icons {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.fa-share-nodes, .fa-star, .fa-eye {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fa-share-nodes:hover, .fa-star:hover, .fa-eye:hover, .fa-bell:hover {
+    color: #F2BB16;
+    transition: color .2s; 
+    cursor: pointer;
+}
+
 .announcements {
     grid-area:announcements;
     display: grid;
@@ -266,14 +300,22 @@ input {
 background-color: white;
 border-radius: 5px;
 box-shadow: 0 5px 5px 0px rgb(150, 150, 150);
-padding: 20px;
 display: grid;
-gap: 10px;
 }
 
 .announcement-card {
     border-bottom: 1px solid rgb(233, 233, 233);
     padding-bottom: 10px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.announcement-card:hover {
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    transition: background-color .2s;
+
+
 }
 
 .announcement-card-title {
@@ -289,7 +331,6 @@ gap: 10px;
 
 .last-card {
     border: 0px;
-    padding-bottom: 0px;
 }
 
 .trending {
@@ -299,7 +340,7 @@ gap: 10px;
 .trending-title {
     font-weight: bold;
     font-size: 15px;
-    
+    margin-bottom: 20px;
 }
 
 .trending-box {
@@ -308,8 +349,35 @@ gap: 10px;
     border-radius: 5px;
     box-shadow: 0 5px 5px 0px rgb(150, 150, 150);
     margin-top: -15px;
+    display: grid;
 }
 
+.trending-row {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    padding: 15px;
+}
+
+.trending-row:hover {
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    transition: background-color .2s;
+
+
+}
+
+.trending-texts {
+    font-size: 12px;
+    display: grid;
+    gap: 3px;
+}
+
+.trending-app {
+    color: #686868;
+
+}
 * {
     font-family:'Roboto',sans-serif;
     /* outline: 1px solid red; */
